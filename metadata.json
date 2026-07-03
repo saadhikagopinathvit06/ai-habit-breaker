@@ -1,0 +1,6 @@
+{
+  "name": "AI Habit Breaker",
+  "description": "A premium, Apple-inspired full-stack application powered by Gemini AI to analyze bad habits, generate personalized 21-day recovery plans, track mood, mood correlation, and daily challenges.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

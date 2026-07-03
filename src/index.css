@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-brand-primary: #1D1D1F;
+  --color-brand-secondary: #86868B;
+  --color-accent-blue: #0071E3;
+  --color-accent-teal: #34C759;
+  --color-glass-bg: rgba(255, 255, 255, 0.4);
+  --color-glass-border: #D2D2D7;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-[#F5F5F7] text-[#1D1D1F] antialiased selection:bg-[#1D1D1F] selection:text-white;
+  }
+
+  /* Clean Minimalism Cards and Panels */
+  .minimal-card {
+    @apply bg-white rounded-[32px] border border-[#E5E5E7] shadow-sm;
+  }
+
+  .minimal-glass {
+    @apply bg-white/40 backdrop-blur-xl border border-[#D2D2D7];
+  }
+
+  /* Custom scrollbar matching Clean Minimalism aesthetics */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Animations and extra custom rules */
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.5; }
+  100% { transform: scale(0.95); opacity: 1; }
+}
+
+.pulse-active {
+  animation: pulse-ring 2s infinite ease-in-out;
+}
